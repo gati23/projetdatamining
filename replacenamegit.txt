@@ -1,0 +1,8 @@
+git filter-branch --commit-filter \
+'if [ "$GIT_AUTHOR_NAME" = "groupe14datavis" ]; then \
+export GIT_AUTHOR_NAME="gati23";\
+export GIT_AUTHOR_EMAIL=gatineau74@gmail.com;\
+export GIT_COMMITTER_NAME="gati23";\
+export GIT_COMMITTER_EMAIL=gatineau74@gmail.com;\
+fi;\
+git commit-tree "$@"'
